@@ -48,7 +48,7 @@ export default async function switchDOM(
   let timeoutID: number | undefined;
   if (timeout > 0) {
     timeoutID = setTimeout(() => {
-      this.abortController?.abort();
+      this.abortController?.abort('Timeout');
     }, timeout);
     eventDetail.timeoutID = timeoutID;
   }
